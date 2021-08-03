@@ -7,8 +7,9 @@ pipeline{
             steps{
                 git branch: 'master' ,
                     url: 'https://github.com/govi230/simple-java-maven-app.git'
-                maven: 'maven-3.8.1'
-                artifactoryMavenBuild goals: 'package'
+                withMaven(maven: 'maven-3.8.1'){
+                    sh 'mvn package'
+                }
             }
         }
     }
