@@ -1,5 +1,5 @@
 pipeline{
-    agent none
+    agent sshAgent
     stages{
         stage("Package Creation"){
             steps{
