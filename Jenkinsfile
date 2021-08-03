@@ -13,7 +13,7 @@ pipeline{
                     traceability: true,
                     options: [
                         artifactsPublisher(disabled: false),
-                        junitPublisher(disabled: false,ignoreAttachments: true)
+                        junitPublisher(disabled: false,ignoreAttachments: false)
                     ]){
                     sh 'mvn package'
                 }
