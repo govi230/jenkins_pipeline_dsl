@@ -7,7 +7,7 @@ pipeline{
             steps{
                 git branch: 'master' ,
                     url: 'https://github.com/govi230/simple-java-maven-app.git'
-                withMaven(maven: 'maven-3.8.1',options: [artifactsPublisher(disabled: True)]){
+                withMaven(maven: 'maven-3.8.1',options: [artifactsPublisher(disabled: true)]){
                     sh 'mvn package'
                 }
             }
