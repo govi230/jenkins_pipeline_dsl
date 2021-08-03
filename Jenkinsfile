@@ -1,6 +1,6 @@
 pipeline{
     agent {
-    label sshAgent
+    label 'sshAgent'
     }
     stages{
         stage("Package Creation"){
