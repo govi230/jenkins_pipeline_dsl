@@ -10,6 +10,7 @@ pipeline{
                 withMaven(
                     maven: 'maven-3.8.1',
                     publisherStrategy: 'EXPLICIT',
+                    traceability: true,
                     options: [
                         artifactsPublisher(disabled: false),
                         junitPublisher(disabled: false)
