@@ -9,9 +9,10 @@ pipeline{
                     url: 'https://github.com/govi230/simple-java-maven-app.git'
                 withMaven(
                     maven: 'maven-3.8.1',
+                    publisherStrategy: 'EXPLICIT',
                     options: [
                         artifactsPublisher(disabled: false),
-                        junitPublisher(disabled: true)
+                        junitPublisher(disabled: false)
                     ]){
                     sh 'mvn package'
                 }
